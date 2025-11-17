@@ -1,14 +1,14 @@
 ﻿namespace Assignment10.Model.Person
 {
     /// <summary>
-    /// Represents a teacher with a department
+    /// Teacher class with department
     /// </summary>
     public class Teacher : Person
     {
         private string _department;
 
         /// <summary>
-        /// Gets or sets the department the teacher belongs to
+        /// Teacher's department
         /// </summary>
         public string Department
         {
@@ -22,7 +22,7 @@
         }
 
         /// <summary>
-        /// Gets the detailed information about the teacher
+        /// Formatted teacher details
         /// </summary>
         public override string Details
         {
@@ -36,7 +36,7 @@
         }
 
         /// <summary>
-        /// Private constructor for internal use
+        /// Default constructor
         /// </summary>
         private Teacher()
         {
@@ -44,52 +44,51 @@
         }
 
         /// <summary>
-        /// Initializes a new instance of Teacher with first and last name
+        /// Constructor with name
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
         public Teacher(string firstName, string lastName) : this(firstName, lastName, 0, null, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Teacher with first name, last name, and ID
+        /// Constructor with name and ID
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Teacher ID</param>
         public Teacher(string firstName, string lastName, int id) : this(firstName, lastName, id, null, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Teacher with first name, last name, ID, and home address
+        /// Constructor with name, ID, and address
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
-        /// <param name="homeAddress">The home address</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Teacher ID</param>
+        /// <param name="homeAddress">Home address</param>
         public Teacher(string firstName, string lastName, int id, Address.Address homeAddress) : this(firstName, lastName, id, homeAddress, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Teacher with all properties
+        /// Full constructor
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
-        /// <param name="homeAddress">The home address</param>
-        /// <param name="department">The department</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Teacher ID</param>
+        /// <param name="homeAddress">Home address</param>
+        /// <param name="department">Department name</param>
         public Teacher(string firstName, string lastName, int id, Address.Address homeAddress, string department) : base(firstName, lastName, id, homeAddress)
         {
             Department = department ?? throw new ArgumentNullException(nameof(department));
         }
 
         /// <summary>
-        /// Returns a string representation of the teacher
+        /// String with teacher info
         /// </summary>
-        /// <returns>A formatted string with teacher information</returns>
         public override string ToString()
         {
             return base.ToString() + $"; Department - {Department}";

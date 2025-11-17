@@ -1,17 +1,17 @@
 namespace Assignment10.Model.Person
 {
     /// <summary>
-    /// Represents a staff member with a job title
+    /// Staff member class with job title
     /// </summary>
     public class Staff : Person
     {
         /// <summary>
-        /// Gets or sets the job title of the staff member
+        /// Job title
         /// </summary>
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets the detailed information about the staff member
+        /// Formatted staff details
         /// </summary>
         public override string Details
         {
@@ -24,7 +24,7 @@ namespace Assignment10.Model.Person
         }
 
         /// <summary>
-        /// Private constructor for internal use
+        /// Default constructor
         /// </summary>
         private Staff()
         {
@@ -32,43 +32,43 @@ namespace Assignment10.Model.Person
         }
 
         /// <summary>
-        /// Initializes a new instance of Staff with first and last name
+        /// Constructor with name
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
         public Staff(string firstName, string lastName) : this(firstName, lastName, 0, null, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Staff with first name, last name, and ID
+        /// Constructor with name and ID
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Staff ID</param>
         public Staff(string firstName, string lastName, int id) : this(firstName, lastName, id, null, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Staff with first name, last name, ID, and home address
+        /// Constructor with name, ID, and address
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
-        /// <param name="homeAddress">The home address</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Staff ID</param>
+        /// <param name="homeAddress">Home address</param>
         public Staff(string firstName, string lastName, int id, Address.Address homeAddress) : this(firstName, lastName, id, homeAddress, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Staff with all properties
+        /// Full constructor
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
-        /// <param name="homeAddress">The home address</param>
-        /// <param name="title">The job title</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Staff ID</param>
+        /// <param name="homeAddress">Home address</param>
+        /// <param name="title">Job title</param>
         public Staff(string firstName, string lastName, int id, Address.Address homeAddress, string title) : base(firstName, lastName, id, homeAddress)
         {
             if (title == null || title == string.Empty)
@@ -77,9 +77,8 @@ namespace Assignment10.Model.Person
         }
 
         /// <summary>
-        /// Returns a string representation of the staff member
+        /// String with staff info
         /// </summary>
-        /// <returns>A formatted string with staff information</returns>
         public override string ToString()
         {
             return base.ToString() + $"; Title - {Title}";

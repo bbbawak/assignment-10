@@ -4,12 +4,12 @@ using Assignment10.Model.Person;
 namespace Assignment10.View
 {
     /// <summary>
-    /// Main form for the application
+    /// Main form that displays person information
     /// </summary>
     public partial class MainForm : Form
     {
         /// <summary>
-        /// Initializes a new instance of the MainForm
+        /// Constructor for main form
         /// </summary>
         public MainForm()
         {
@@ -19,7 +19,7 @@ namespace Assignment10.View
         }
 
         /// <summary>
-        /// Demonstrates the polymorphic collection of Person objects
+        /// Demo method to test polymorphism with different person types
         /// </summary>
         private void Demo()
         {

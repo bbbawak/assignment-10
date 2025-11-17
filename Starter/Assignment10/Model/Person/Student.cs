@@ -1,7 +1,7 @@
 ﻿namespace Assignment10.Model.Person
 {
     /// <summary>
-    /// Represents a student with major and minor fields
+    /// Student class with major and minor
     /// </summary>
     public class Student : Person
     {
@@ -11,7 +11,7 @@
         private string _minor;
 
         /// <summary>
-        /// Gets or sets the major field of study
+        /// Student's major field of study
         /// </summary>
         public string Major
         {
@@ -25,7 +25,7 @@
         }
 
         /// <summary>
-        /// Gets or sets the minor field of study
+        /// Student's minor field of study
         /// </summary>
         public string Minor
         {
@@ -39,7 +39,7 @@
         }
 
         /// <summary>
-        /// Gets the detailed information about the student
+        /// Formatted student details
         /// </summary>
         public override string Details
         {
@@ -57,7 +57,7 @@
         }
 
         /// <summary>
-        /// Private constructor for internal use
+        /// Default constructor
         /// </summary>
         private Student()
         {
@@ -65,43 +65,43 @@
         }
 
         /// <summary>
-        /// Initializes a new instance of Student with first and last name
+        /// Constructor with name
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
         public Student(string firstName, string lastName) : this(firstName, lastName, 0, null, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Student with first name, last name, and ID
+        /// Constructor with name and ID
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Student ID</param>
         public Student(string firstName, string lastName, int id) : this(firstName, lastName, id, null, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Student with first name, last name, ID, and home address
+        /// Constructor with name, ID, and address
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
-        /// <param name="homeAddress">The home address</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Student ID</param>
+        /// <param name="homeAddress">Home address</param>
         public Student(string firstName, string lastName, int id, Address.Address homeAddress) : this(firstName, lastName, id, homeAddress, string.Empty)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Student with all properties
+        /// Full constructor
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
-        /// <param name="homeAddress">The home address</param>
-        /// <param name="major">The major field of study</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">Student ID</param>
+        /// <param name="homeAddress">Home address</param>
+        /// <param name="major">Major field</param>
         public Student(string firstName, string lastName, int id, Address.Address homeAddress, string major) : base(firstName, lastName, id, homeAddress)
         {
             Major = major ?? throw new ArgumentNullException(nameof(major));
@@ -109,9 +109,8 @@
         }
 
         /// <summary>
-        /// Returns a string representation of the student
+        /// String with student info
         /// </summary>
-        /// <returns>A formatted string with student information</returns>
         public override string ToString()
         {
             return base.ToString() + $"; Major - {Major}";

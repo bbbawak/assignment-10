@@ -1,68 +1,68 @@
 ﻿namespace Assignment10.Model.Person
 {
     /// <summary>
-    /// Abstract base class representing a person with basic information
+    /// Base class for all person types
     /// </summary>
     public abstract class Person
     {
         /// <summary>
-        /// Gets or sets the first name of the person
+        /// Person's first name
         /// </summary>
         public string FirstName { get; set; }
         
         /// <summary>
-        /// Gets or sets the last name of the person
+        /// Person's last name
         /// </summary>
         public string LastName { get; set; }
         
         /// <summary>
-        /// Gets or sets the ID of the person
+        /// Unique ID number
         /// </summary>
         public int Id { get; set; }
         
         /// <summary>
-        /// Gets or sets the home address of the person
+        /// Home address
         /// </summary>
         public Address.Address HomeAddress { get; set; }
 
         /// <summary>
-        /// Gets the detailed information about the person
+        /// Formatted details string for display
         /// </summary>
         public abstract string Details { get; }
 
         /// <summary>
-        /// Protected constructor for derived classes
+        /// Default constructor
         /// </summary>
         protected Person()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Person with first and last name
+        /// Constructor with name only
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
         public Person(string firstName, string lastName) : this(firstName, lastName, 0, null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Person with first name, last name, and ID
+        /// Constructor with name and ID
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">ID number</param>
         public Person(string firstName, string lastName, int id) : this(firstName, lastName, id, null)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Person with all properties
+        /// Full constructor with all parameters
         /// </summary>
-        /// <param name="firstName">The first name</param>
-        /// <param name="lastName">The last name</param>
-        /// <param name="id">The ID</param>
-        /// <param name="homeAddress">The home address</param>
+        /// <param name="firstName">First name</param>
+        /// <param name="lastName">Last name</param>
+        /// <param name="id">ID number</param>
+        /// <param name="homeAddress">Home address</param>
         public Person(string firstName, string lastName, int id, Address.Address homeAddress)
         {
             FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
@@ -72,9 +72,8 @@
         }
 
         /// <summary>
-        /// Returns a string representation of the person
+        /// String representation showing name and ID
         /// </summary>
-        /// <returns>A formatted string with person information</returns>
         public override string ToString()
         {
             return $"{FirstName} {LastName} : ID - {Id}";

@@ -1,44 +1,44 @@
 ﻿namespace Assignment10.Model.Address
 {
     /// <summary>
-    /// Represents a physical address with street, city, state, and zip code
+    /// Address class
     /// </summary>
     public class Address
     {
         /// <summary>
-        /// Gets or sets the street address
+        /// Street address
         /// </summary>
         public string Street { get; set; }
 
         /// <summary>
-        /// Gets or sets the city
+        /// City name
         /// </summary>
         public string City { get; set; }
 
         /// <summary>
-        /// Gets or sets the state
+        /// State abbreviation
         /// </summary>
         public string State { get; set; }
 
         /// <summary>
-        /// Gets or sets the zip code
+        /// Zip code
         /// </summary>
         public int Zip { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of Address with default values
+        /// Default constructor
         /// </summary>
         public Address() : this(string.Empty, string.Empty, string.Empty, 0)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of Address with all properties
+        /// Constructor with all address parts
         /// </summary>
-        /// <param name="street">The street address</param>
-        /// <param name="city">The city</param>
-        /// <param name="state">The state</param>
-        /// <param name="zip">The zip code</param>
+        /// <param name="street">Street address</param>
+        /// <param name="city">City</param>
+        /// <param name="state">State</param>
+        /// <param name="zip">Zip code</param>
         public Address(string street, string city, string state, int zip)
         {
             Street = street ?? throw new ArgumentNullException(nameof(street));
@@ -48,9 +48,8 @@
         }
 
         /// <summary>
-        /// Returns a string representation of the address
+        /// Formats address as string
         /// </summary>
-        /// <returns>A formatted address string</returns>
         public override string ToString()
         {
             return Street + Environment.NewLine + City + ", " + State + Environment.NewLine + Zip + Environment.NewLine;

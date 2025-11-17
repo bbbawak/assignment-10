@@ -1,4 +1,4 @@
-namespace Assignment10.Model.Person
+namespace BernardBawakA10.Model.Person
 {
     /// <summary>
     /// Staff member class with job title
@@ -85,4 +85,5 @@ namespace Assignment10.Model.Person
         }
     }
 }
+
 

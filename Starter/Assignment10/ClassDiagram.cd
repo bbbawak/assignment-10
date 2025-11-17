@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Assignment10.Model.Person.Person">
+    <Position X="6" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAEAAAAAAAAAAAAIAAAAAAAAAAAAg=</HashCode>
+      <FileName>Model\Person\Person.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HomeAddress" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assignment10.Model.Person.Student">
+    <Position X="2" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Model\Person\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment10.Model.Person.Teacher">
+    <Position X="6" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Model\Person\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment10.Model.Person.Staff">
+    <Position X="10" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Model\Person\Staff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment10.Model.Address.Address">
+    <Position X="12" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAIAAAAAAIAAACAAAAAQAAAAA=</HashCode>
+      <FileName>Model\Address\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment10.View.MainForm">
+    <Position X="2" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>View\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
+
